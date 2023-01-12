@@ -1,0 +1,20 @@
+<h2>Student Details</h2>
+
+<table>
+  <tr>
+    <th>Id no</th>
+    <th>Name</th>
+    <th>Mobile No</th>
+    <th>Address</th>
+  </tr>
+  <tr *ngFor="let mdata of studentData">
+    <td>{{mdata.Id_no}}</td>
+    <td>{{mdata.Name}}</td>
+    <td>{{mdata.Mobile_no}}</td>
+    <td>{{mdata.Address}}</td>
+    <td  style="background-color: green;"><button style="background-color: green; color: white; border: none;" (click)="edit(mdata.Id_no)">edit</button></td>
+    <td style="background-color: red;"><button style="background-color: red; color: white; border: none;"  (click)="delData(mdata.Id_no)">delete</button></td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>
